@@ -21,3 +21,20 @@ Content-Type: application/json
     ],
     "company": "potato inc"
 }
+
+### Tenta criar um usuário inválido
+
+POST /api/v1/users HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "email": "",
+    "password": "1234RT56",
+    "handle": "papas",
+    "name": "Kartofel",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "company": "potato inc"
+}

@@ -6,8 +6,15 @@ import org.springframework.stereotype.Component;
 @Component
 public class NewUserEventListener {
 
+    private final UserBusiness userBusiness;
+
+    public NewUserEventListener(UserBusiness userBusiness) {
+        this.userBusiness = userBusiness;
+    }
+
+
     @RabbitListener(queues = RabbitMQConfig.USER_QUEUE)
-    public void newUser(NewUserEvent event) {
-        
+    public void newUser(NewUser event) {
+        userBusiness.criarUsuario(event);
     }
 }
