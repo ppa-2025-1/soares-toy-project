@@ -1,0 +1,64 @@
+
+### Get all users
+
+GET /api/v1/users HTTP/1.1
+Host: localhost:8081
+Accept: application/json
+
+### Create a new User
+
+POST /api/v1/users HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{
+    "email": "batata@potato.com",
+    "password": "1234RT56",
+    "handle": "papas",
+    "name": "Kartofel",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "company": "potato inc"
+}
+
+### Tenta criar um usuário inválido
+
+POST /api/v1/users HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{
+    "email": "",
+    "password": "1234RT56",
+    "handle": "papas",
+    "name": "Kartofel",
+    "roles": [
+        "ROLE_USER"
+    ],
+    "company": "potato inc"
+}
+
+
+
+
+### Create a new Chamado
+
+POST /api/v1/chamados HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{
+    "acao": "Instalar",
+    "objeto": "Impressora",
+    "detalhamento": "Instalar impressora laser na sala 1",
+    "usuarioId": "1"
+}
+
+### Get all Chamado
+
+GET /api/v1/chamados HTTP/1.1
+Host: localhost:8081
+Content-Type: application/json
+
+{ }
