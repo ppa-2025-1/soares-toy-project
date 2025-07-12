@@ -1,0 +1,20 @@
+### Create a new Chamado
+
+POST /api/v1/chamados HTTP/1.1
+Host: localhost:8082
+Content-Type: application/json
+
+{
+    "acao": "Instalar",
+    "objeto": "Impressora",
+    "detalhamento": "Instalar impressora laser na sala 1",
+    "usuarioId": "1"
+}
+
+### Get Chamado by id
+
+GET /api/v1/chamados/1 HTTP/1.1
+Host: localhost:8082
+Content-Type: application/json
+
+{ }
