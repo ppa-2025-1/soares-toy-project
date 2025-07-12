@@ -1,5 +1,3 @@
-# user-api-with-layers
-
 # Projeto Toy - Arquitetura de Microsserviços
 
 Este é um projeto de exemplo que implementa uma arquitetura de microsserviços para um sistema de gerenciamento de usuários e chamados (tickets). O projeto foi refatorado de uma arquitetura monolítica para demonstrar a separação de responsabilidades e a comunicação entre serviços.
@@ -17,8 +15,6 @@ O sistema é composto por dois microsserviços principais:
 2.  O `ms-user` valida os dados, salva o novo usuário em seu próprio banco de dados e obtém o `ID` gerado.
 3.  Imediatamente após salvar, o `ms-user` utiliza um `WebClient` para fazer uma chamada de API interna para o endpoint `POST /api/v1/chamados` do `ms-chamado`.
 4.  O `ms-chamado` recebe a requisição, cria um chamado padrão ("Criar e-mail para novo usuário") e o associa ao `userId` recebido.
-
-![Diagrama de Arquitetura (Exemplo)](https://i.imgur.com/gC5wD4v.png)
 
 ## Como Executar o Projeto
 
